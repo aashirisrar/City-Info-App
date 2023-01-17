@@ -93,8 +93,8 @@
 
       <h2 class="mt-4">Results</h2>
       <span id="result">
-        <p>Search for a location to view its details here.</p></span
-      >
+        <p>Search for a location to view its details here.</p>
+      </span>
     </main>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -123,12 +123,74 @@
         }).then((resp) => {
           console.log(resp);
 
-          let htmlstr = `Capital City: <b>${resp[0].capital}</b>`;
+          let htmlstr = `Capital City: <b>${resp[0].capital}</b> <br>
+          <div class="card-deck mt-4">
+  <div class="card">
+    <img src="/images/hero.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Surface Area</h5>
+      <p class="card-text">${resp[0].surface_area} kms</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero1.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Population</h5>
+      <p class="card-text">${resp[0].population}000</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero2.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Currency</h5>
+      <p class="card-text">${resp[0]["currency"].code}</p>
+      <p class="card-text">${resp[0]["currency"].name}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<div class="card-deck mt-4">
+  <div class="card">
+    <img src="/images/hero1.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">GDP</h5>
+      <p class="card-text">${resp[0].gdp}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero2.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">GDP Per Capita</h5>
+      <p class="card-text">${resp[0].gdp_per_capita}000</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero1.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Life Expectancy</h5>
+      <p class="card-text">${resp[0].life_expectancy_male}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+`;
 
           result.innerHTML = htmlstr;
           return resp;
         });
       });
     </script>
+
+    <footer class="py-3 my-4">
+      <p class="text-center text-muted">
+        © 2023 Made By Aashir Israr with ❤️ in Lahore
+      </p>
+    </footer>
   </body>
 </html>
