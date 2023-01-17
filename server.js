@@ -14,7 +14,7 @@ app.get("/search", (req, res) => {
   const options = {
     method: "GET",
     url: "https://country-by-api-ninjas.p.rapidapi.com/v1/country",
-    params: { name: req.query.entry },
+    params: { name: req.query.country },
     headers: {
       "X-RapidAPI-Key": "b8eb4c64d1msh82f4f5538e5065ap1d2b92jsn7113e96b5efb",
       "X-RapidAPI-Host": "country-by-api-ninjas.p.rapidapi.com",
