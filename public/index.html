@@ -157,7 +157,7 @@
     <img src="/images/hero1.jpg" class="card-img-top" alt="hero">
     <div class="card-body">
       <h5 class="card-title">GDP</h5>
-      <p class="card-text">${resp[0].gdp}</p>
+      <p class="card-text">${resp[0].gdp}000000 USD</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
@@ -165,15 +165,43 @@
     <img src="/images/hero2.jpg" class="card-img-top" alt="hero">
     <div class="card-body">
       <h5 class="card-title">GDP Per Capita</h5>
-      <p class="card-text">${resp[0].gdp_per_capita}000</p>
+      <p class="card-text">${resp[0].gdp_per_capita} USD</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Life Expectancy</h5>
+      <p class="card-text">${resp[0].life_expectancy_male} years</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-deck mt-4">
+  <div class="card">
+    <img src="/images/hero2.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">GDP Growth</h5>
+      <p class="card-text">${resp[0].gdp_growth}%</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/images/hero.jpg" class="card-img-top" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">Forested Area</h5>
+      <p class="card-text">${resp[0].forested_area}%</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     <img src="/images/hero1.jpg" class="card-img-top" alt="hero">
     <div class="card-body">
-      <h5 class="card-title">Life Expectancy</h5>
-      <p class="card-text">${resp[0].life_expectancy_male}</p>
+      <h5 class="card-title">Carbon Dioxide Emissions</h5>
+      <p class="card-text">${resp[0].co2_emissions} million tons</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
